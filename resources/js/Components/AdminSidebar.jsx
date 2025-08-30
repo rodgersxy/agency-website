@@ -27,7 +27,7 @@ export default function AdminSidebar() {
     const menuItems = [
         { href: route('admin.dashboard'), label: 'Dashboard', icon: <RxDashboard className="mr-3 flex-shrink-0 h-5 w-5" /> },
         // These routes don't exist yet, but we'll add them later
-        { href: '#', label: 'Projects', icon: <GrProjects className="mr-3 flex-shrink-0 h-5 w-5" /> },
+        { href: route('admin.projects.index'), label: 'Projects', icon: <GrProjects className="mr-3 flex-shrink-0 h-5 w-5" /> },
         { href: '#', label: 'Messages', icon: <FiMessageSquare className="mr-3 flex-shrink-0 h-5 w-5" /> },
         { href: '#', label: 'Blogs', icon: <FaBlog className="mr-3 flex-shrink-0 h-5 w-5" /> },
     ];

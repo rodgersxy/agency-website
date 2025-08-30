@@ -1,10 +1,12 @@
 <?php
 
+use App\Models\Project;
 use Illuminate\Http\Request;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
+
 
 Route::get('/', function () {
     return Inertia::render('Home');
@@ -20,8 +22,10 @@ Route::get('/services', function () {
 })->name('services');
 
 Route::get('/work', function () {
-    // You'll need to create a Work.jsx page
-    return Inertia::render('Work');
+    return Inertia::render('Work', [
+        // Fetch all projects, newest first, and pass them to the 'projects' prop
+        'projects' => Project::latest()->get(),
+    ]);
 })->name('work');
 
 Route::get('/contact', function (Request $request) { // <-- 3. Inject the Request
@@ -46,6 +50,13 @@ Route::middleware('auth')->group(function () {
 // ADMIN ROUTES
 Route::middleware(['auth', 'is_admin'])->prefix('admin')->name('admin.')->group(function () {
     Route::get('/dashboard', [\App\Http\Controllers\Admin\DashboardController::class, 'index'])->name('dashboard');
+    Route::get('/projects', [\App\Http\Controllers\Admin\ProjectController::class, 'index'])->name('projects.index');
+    Route::get('/projects/create', [\App\Http\Controllers\Admin\ProjectController::class, 'create'])->name('projects.create');
+    Route::post('/projects', [\App\Http\Controllers\Admin\ProjectController::class, 'store'])->name('projects.store');
+
+    Route::get('/projects/{project}/edit', [\App\Http\Controllers\Admin\ProjectController::class, 'edit'])->name('projects.edit');
+    // This route handles the form submission for updating the project
+    Route::put('/projects/{project}', [\App\Http\Controllers\Admin\ProjectController::class, 'update'])->name('projects.update');
 });
 
 require __DIR__.'/auth.php';
