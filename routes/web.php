@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Message;
 use App\Models\Project;
 use Illuminate\Http\Request;
 use App\Http\Controllers\ProfileController;
@@ -28,13 +29,26 @@ Route::get('/work', function () {
     ]);
 })->name('work');
 
-Route::get('/contact', function (Request $request) { // <-- 3. Inject the Request
+Route::get('/contact', function (Request $request) {
     return Inertia::render('Contact', [
-        // 4. Get 'subject' from the URL and pass it as a prop.
-        // If it doesn't exist, it will default to an empty string.
         'subject' => $request->query('subject', ''),
     ]);
 })->name('contact');
+
+Route::post('/contact', function () {
+    $validated = request()->validate([
+        'name' => 'required|string|max:255',
+        'email' => 'required|email|max:255',
+        'title' => 'required|string|max:255',
+        'message' => 'required|string|max:2000',
+    ]);
+
+    // Create and save the new message to the database
+    Message::create($validated);
+
+    // Redirect back with the success flash message as before
+    return back()->with('success', 'Your message has been sent successfully! We\'ll get back to you soon.');
+})->name('contact.store');
 
 
 Route::get('/dashboard', function () {
@@ -57,6 +71,13 @@ Route::middleware(['auth', 'is_admin'])->prefix('admin')->name('admin.')->group(
     Route::get('/projects/{project}/edit', [\App\Http\Controllers\Admin\ProjectController::class, 'edit'])->name('projects.edit');
     // This route handles the form submission for updating the project
     Route::put('/projects/{project}', [\App\Http\Controllers\Admin\ProjectController::class, 'update'])->name('projects.update');
+
+    Route::get('/messages', [\App\Http\Controllers\Admin\MessageController::class, 'index'])->name('messages.index');
+
+    Route::delete('/messages/{message}', [\App\Http\Controllers\Admin\MessageController::class, 'destroy'])->name('messages.destroy');
+    // Handles deleting all messages
+    Route::delete('/messages', [\App\Http\Controllers\Admin\MessageController::class, 'destroyAll'])->name('messages.destroyAll');
+
 });
 
 require __DIR__.'/auth.php';

@@ -19,7 +19,7 @@ const packages = [
     },
     {
         name: 'Small Business Package',
-        price: 'Starting at KES 25,000',
+        price: 'Starting at KES 35,000',
         description: 'The complete solution for SMEs to establish a strong, professional online presence.',
         features: [
             'Everything in Personal, plus:',
@@ -28,12 +28,13 @@ const packages = [
             'M-Pesa Integration Ready',
             'Google Analytics Setup',
             '1 Month of Technical Support',
+            '1Year Free Domain & Hosting',
         ],
         popular: true,
     },
     {
         name: 'E-Commerce Website',
-        price: 'Starting at KES 55,000',
+        price: 'Starting at KES 60,000',
         description: 'A powerful online store built to sell your products and services across Kenya.',
         features: [
             'Everything in Small Business, plus:',

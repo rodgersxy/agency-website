@@ -14,7 +14,7 @@ export default function ProjectCard({ project }) {
             key={project.id}
             className="group flex flex-col overflow-hidden rounded-2xl bg-white dark:bg-gray-800 shadow-lg transition-all duration-300 hover:shadow-2xl hover:-translate-y-1"
         >
-            <h3 className="px-6 pt-6 text-xl font-bold leading-6 text-gray-900 dark:text-gray-100">
+            <h3 className="px-6 pt-6 text-xl font-bold leading-6 text-orange-500 dark:text-gray-100">
                 {project.title}
             </h3>
             

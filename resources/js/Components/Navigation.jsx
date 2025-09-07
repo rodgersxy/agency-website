@@ -34,15 +34,21 @@ export default function Navigation() {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex items-center justify-between h-20">
                     <div className="flex-shrink-0 text-center">
+    {/* The Link now wraps the image and is a flex container to center it */}
     <Link 
         href={route('home')} 
-        className="text-3xl font-bold text-amber-600 tracking-wider block"
+        className="flex justify-center mb-2" // Added margin-bottom for spacing
     >
-        UJUZIWEB
+        {/* The text is replaced with an img tag */}
+        <img 
+            src="/images/logo.png" // Path to your logo in the 'public' folder
+            alt="UJUZIWEB Logo"     // IMPORTANT: Always add an alt tag for accessibility
+            className="h-44 w-54" // Control the logo size here. 'h-12' is 48px. Adjust as needed.
+        />
     </Link>
-    <p className="text-sm text-gray-600 tracking-wide">
+    {/* <p className="text-sm text-gray-600 tracking-wide">
         Building Websites & Software that Grow Businesses
-    </p>
+    </p> */}
 </div>
 
                     <div className="hidden md:flex md:items-center md:space-x-2">
