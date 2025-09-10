@@ -1,7 +1,7 @@
 import React from 'react';
 import { Head } from '@inertiajs/react';
 import MainLayout from '@/Layouts/MainLayout';
-import { FaCode, FaMobileAlt, FaCloud } from 'react-icons/fa'; // Example icons
+import { FaCode, FaMobileAlt, FaCloud } from 'react-icons/fa'; 
 
 const services = [
     {
@@ -19,6 +19,15 @@ const services = [
         title: 'Cloud & DevOps Solutions',
         description: 'Leverage the power of the cloud. We provide expert solutions for infrastructure, deployment pipelines, and scalability.',
     },
+    {
+        icon: <FaCloud className="h-12 w-12 text-amber-500" />,
+        title: 'SEO Services',
+        description: `A beautiful website is only half the story. We optimize your website for search engines, ensuring it ranks high in search results.
+        At UJUZIWEB, we don't just build websites, we make sure they get noticed. With AI shaping how people search and how results are ranked, SEO isn't
+        about stuffing keywords anymore - it's about creating meaningful content, optimizing for user intent and making sure your website stands out.
+        `,
+    },
+
 ];
 
 export default function Services() {

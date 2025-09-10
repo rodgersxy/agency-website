@@ -41,9 +41,9 @@ export default function Navigation() {
     >
         {/* The text is replaced with an img tag */}
         <img 
-            src="/images/logo.png" // Path to your logo in the 'public' folder
+            src="/images/logo2.png" // Path to your logo in the 'public' folder
             alt="UJUZIWEB Logo"     // IMPORTANT: Always add an alt tag for accessibility
-            className="h-44 w-54" // Control the logo size here. 'h-12' is 48px. Adjust as needed.
+            className="h-18 w-28" // Control the logo size here. 'h-12' is 48px. Adjust as needed.
         />
     </Link>
     {/* <p className="text-sm text-gray-600 tracking-wide">

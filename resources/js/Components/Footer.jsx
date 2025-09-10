@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from '@inertiajs/react';
-import { FaFacebook, FaLinkedin, FaGithub, FaInstagramSquare, FaTiktok, FaEnvelope, FaPhone, FaMapMarkerAlt, FaWhatsapp } from 'react-icons/fa';
+import { FaFacebook, FaLinkedin, FaInstagramSquare, FaTiktok, FaEnvelope, FaPhone, FaMapMarkerAlt, FaWhatsapp } from 'react-icons/fa';
 import { FaSquareXTwitter } from "react-icons/fa6";
 
 // --- Social Media Links ---
@@ -134,7 +134,7 @@ export default function Footer() {
                         {/* Copyright - More Prominent */}
                         <div className="text-center lg:text-left">
                             <p className="text-gray-300 text-base font-medium mb-2">
-                                &copy; {currentYear} UJUZIWEB Inc. All rights reserved.
+                                &copy; {currentYear} TECHLUP Inc. All rights reserved.
                             </p>
                             <p className="text-gray-400 text-sm">
                                 Made with ❤️ in Kenya

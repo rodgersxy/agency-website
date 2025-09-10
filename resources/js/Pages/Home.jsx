@@ -16,7 +16,7 @@ const features = [
 export default function Home() {
   return (
     <>
-      <Head title="Welcome to UJUZIWEB" />
+      <Head title="Welcome to Techlup Solution" />
       
       {/* Hero Section */}
       <div className="bg-gradient-to-b from-amber-50 to-white dark:from-gray-900 dark:to-slate-800">
