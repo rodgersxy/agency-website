@@ -1,6 +1,6 @@
 import React from 'react';
-import Navigation from '@/Components/Navigation'; // We will create this next
-import Footer from '@/Components/Footer';       // And this one too
+import Navigation from '@/Components/Navigation'; 
+import Footer from '@/Components/Footer';       
 
 export default function MainLayout({ children }) {
   return (

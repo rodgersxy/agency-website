@@ -6,10 +6,11 @@ const packages = [
     
     {
         name: 'Personal Website',
-        price: 'Starting at KES 12,000',
+        price: 'Starting at KES 15,000',
         description: 'Perfect for freelancers, artists, and individuals looking to build a personal brand online.',
         features: [
             'Custom Domain & Hosting Setup',
+            'Business email setup',
             'Mobile-Responsive Design',
             'Contact Form Integration',
             'SEO Optimization',

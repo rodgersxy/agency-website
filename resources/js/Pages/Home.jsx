@@ -3,6 +3,7 @@ import { Head, Link } from '@inertiajs/react';
 import MainLayout from '@/Layouts/MainLayout';
 import { FaRocket, FaCheckCircle, FaClock, FaShieldAlt, FaArrowRight } from 'react-icons/fa';
 import PricingSection from '@/Components/PricingSection';
+import WhyChooseUs from '@/Components/WhyChooseUs';
 
 // Best Practice: Keep feature data separate for easy updates.
 const features = [
@@ -30,10 +31,14 @@ export default function Home() {
             </span>
           </h1>
 
-          {/* Sub-headline */}
-          <p className="mx-auto mt-6 max-w-2xl text-lg tracking-tight text-slate-600 dark:text-slate-300">
-            We don’t just build websites — we create powerful online platforms that drive results. From sleek, user-friendly designs to strategies that attract and convert, we help businesses grow their digital presence with impact.
-          </p>
+         {/* Sub-headline */}
+        <p className="mx-auto mt-6 max-w-2xl text-lg tracking-tight text-slate-600 dark:text-slate-300">
+            We don’t just build 
+            <span className="font-semibold text-amber-600 text-2xl"> websites</span>, 
+            <span className="font-semibold text-amber-600 text-2xl"> e-commerce</span>, and 
+            <span className="font-semibold text-amber-600 text-2xl"> custom software</span> — 
+            we create powerful online platforms that drive results. From sleek, user-friendly designs to strategies that attract and convert, we help businesses grow their digital presence with impact.
+        </p>
 
           {/* Feature Bubbles */}
           <div className="mt-10 flex flex-wrap justify-center gap-4 sm:gap-6">
@@ -66,6 +71,8 @@ export default function Home() {
       </div>
       
        <PricingSection />
+       <WhyChooseUs />
+       
       
     </>
   );
