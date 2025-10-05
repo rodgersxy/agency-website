@@ -1,16 +1,26 @@
 <?php
 
+use App\Models\Blog; 
 use App\Models\Message;
 use App\Models\Project;
 use Illuminate\Http\Request;
+use App\Http\Controllers\BlogController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\Admin\BlogController as AdminBlogController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
 
 Route::get('/', function () {
-    return Inertia::render('Home');
+    return Inertia::render('Home', [
+        // Fetch the 3 latest published posts
+        'latestBlogs' => Blog::whereNotNull('published_at')
+                            ->where('published_at', '<=', now())
+                            ->latest('published_at')
+                            ->take(3)
+                            ->get()
+    ]);
 })->name('home');
 
 Route::get('/about', function () {
@@ -50,6 +60,9 @@ Route::post('/contact', function () {
     return back()->with('success', 'Your message has been sent successfully! We\'ll get back to you soon.');
 })->name('contact.store');
 
+Route::get('/blog', [BlogController::class, 'index'])->name('blog.index');
+Route::get('/blog/{blog}', [BlogController::class, 'show'])->name('blog.show');
+
 
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
@@ -77,6 +90,10 @@ Route::middleware(['auth', 'is_admin'])->prefix('admin')->name('admin.')->group(
     Route::delete('/messages/{message}', [\App\Http\Controllers\Admin\MessageController::class, 'destroy'])->name('messages.destroy');
     // Handles deleting all messages
     Route::delete('/messages', [\App\Http\Controllers\Admin\MessageController::class, 'destroyAll'])->name('messages.destroyAll');
+
+    Route::resource('blogs', AdminBlogController::class)
+     ->parameters(['blogs' => 'blog:id']) // <-- THIS IS THE CORRECT METHOD for Laravel 10
+     ->where(['blog' => '[0-9]+']);
 
 });
 

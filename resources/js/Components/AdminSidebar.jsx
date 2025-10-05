@@ -29,7 +29,7 @@ export default function AdminSidebar() {
         // These routes don't exist yet, but we'll add them later
         { href: route('admin.projects.index'), label: 'Projects', icon: <GrProjects className="mr-3 flex-shrink-0 h-5 w-5" /> },
         { href: route('admin.messages.index'), label: 'Messages', icon: <FiMessageSquare className="mr-3 flex-shrink-0 h-5 w-5" /> },
-        { href: '#', label: 'Blogs', icon: <FaBlog className="mr-3 flex-shrink-0 h-5 w-5" /> },
+        { href: route('admin.blogs.index'), label: 'Blogs', icon: <FaBlog className="mr-3 flex-shrink-0 h-5 w-5" /> },
     ];
 
     return (

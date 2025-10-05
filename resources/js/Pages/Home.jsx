@@ -4,6 +4,7 @@ import MainLayout from '@/Layouts/MainLayout';
 import { FaRocket, FaCheckCircle, FaClock, FaShieldAlt, FaArrowRight } from 'react-icons/fa';
 import PricingSection from '@/Components/PricingSection';
 import WhyChooseUs from '@/Components/WhyChooseUs';
+import LatestBlogs from '@/Components/LatestBlogs';
 
 // Best Practice: Keep feature data separate for easy updates.
 const features = [
@@ -14,10 +15,10 @@ const features = [
     
 ];
 
-export default function Home() {
+export default function Home({ latestBlogs }) {
   return (
     <>
-      <Head title="Welcome to Techlup Solution" />
+      <Head title="cyberark technologies Web Design, Web Development & Software Solutions" description="cyberark technologies is a Kenyan web and software development agency helping SMEs build modern websites, e-commerce stores, and digital systems that grow their business online." />
       
       {/* Hero Section */}
       <div className="bg-gradient-to-b from-amber-50 to-white dark:from-gray-900 dark:to-slate-800">
@@ -72,6 +73,7 @@ export default function Home() {
       
        <PricingSection />
        <WhyChooseUs />
+       <LatestBlogs blogs={latestBlogs} />
        
       
     </>

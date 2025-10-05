@@ -26,24 +26,25 @@ export default function Navigation() {
         { href: 'home', text: 'Home' },
         { href: 'services', text: 'Services' },
         { href: 'work', text: 'Our Work' },
+        { href: 'blog.index', text: 'Blog' },
         { href: 'contact', text: 'Contact' },
     ];
 
     return (
         <nav className="bg-white dark:bg-gray-800 shadow-md sticky top-0 z-50">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="flex items-center justify-between h-20">
+                <div className="flex items-center justify-between h-28">
                     <div className="flex-shrink-0 text-center">
     {/* The Link now wraps the image and is a flex container to center it */}
     <Link 
         href={route('home')} 
         className="flex justify-center mb-2" // Added margin-bottom for spacing
     >
-        {/* The text is replaced with an img tag */}
+        
         <img 
-            src="/images/logo2.png" // Path to your logo in the 'public' folder
-            alt="UJUZIWEB Logo"     // IMPORTANT: Always add an alt tag for accessibility
-            className="h-18 w-28" // Control the logo size here. 'h-12' is 48px. Adjust as needed.
+            src="/images/cyberarklogo-m.png" // Path to your logo in the 'public' folder
+            alt="cyberark technologies Logo"     // IMPORTANT: Always add an alt tag for accessibility
+            className="h-24 w-auto" // Control the logo size here. 'h-12' is 48px. Adjust as needed.
         />
     </Link>
     {/* <p className="text-sm text-gray-600 tracking-wide">

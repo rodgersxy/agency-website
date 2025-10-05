@@ -1,5 +1,5 @@
 import React from 'react';
-import { Head } from '@inertiajs/react';
+import { Head, Link } from '@inertiajs/react';
 import MainLayout from '@/Layouts/MainLayout';
 import { FaCode, FaMobileAlt, FaCloudUploadAlt, FaBullhorn, FaCreditCard } from 'react-icons/fa'; // Added more specific icons
 
@@ -37,8 +37,8 @@ export default function Services() {
         <>
             {/* SEO-focused Head component */}
             <Head 
-                title="Professional Web Design & Digital Marketing Services in Kenya" 
-                description="UJUZIWEB offers custom web design, e-commerce with M-Pesa integration, mobile app development, and SEO services for businesses in Kenya."
+                title="Professional Web Design & developmemt ,Software Development & Digital Marketing Services in Kenya" 
+                description="cyberark technologies offers custom web design, e-commerce with M-Pesa integration, mobile app development, and SEO services for businesses in Kenya."
             />
             
             {/* 1. Reduced top padding from py-24 to pt-16 */}

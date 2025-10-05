@@ -8,12 +8,12 @@ export default function Work({ projects }) {
         <>
             {/* 1. SEO-focused Head component */}
             <Head 
-                title="Our Web Design & Development Portfolio | Projects in Kenya"
-                description="Explore the portfolio of UJUZIWEB, showcasing custom websites, e-commerce stores, and software solutions built for businesses across Kenya."
+                title="Web Design, Web Development & Software Solutions | Projects in Kenya"
+                description="Explore the portfolio and work of cyberark technologies, showcasing custom websites, e-commerce stores, and software solutions built for businesses across Kenya."
             />
             
             {/* 2. Reduced top padding */}
-            <div className="bg-gray-50 dark:bg-gray-900 pt-16 pb-24 sm:pt-24 sm:pb-32">
+            <div className="bg-white dark:bg-gray-900 pt-16 pb-24 sm:pt-24 sm:pb-32">
                 <div className="mx-auto max-w-7xl px-6 lg:px-8">
                     {/* 3. Rewritten Section Header */}
                     <div className="mx-auto max-w-2xl text-center">
@@ -41,21 +41,22 @@ export default function Work({ projects }) {
 
                     {/* 4. New Call to Action (CTA) Section */}
                     <div className="mt-24 text-center">
-                        <h3 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-gray-100 sm:text-3xl">
-                            Have a project in mind?
-                        </h3>
-                        <p className="mt-4 text-lg leading-8 text-gray-600 dark:text-gray-300">
-                            Let's turn your idea into the next success story.
-                        </p>
-                        <div className="mt-8">
-                            <Link
-                                href={route('contact')}
-                                className="inline-block rounded-md bg-amber-600 px-6 py-3 text-base font-semibold text-white shadow-sm hover:bg-amber-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-600"
-                            >
-                                Get a Free Quote
-                            </Link>
-                        </div>
+                    <h3 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-gray-100 sm:text-3xl">
+                        Need a new website or a redesign?
+                    </h3>
+                    <p className="mt-4 text-lg leading-8 text-gray-600 dark:text-gray-300">
+                        Whether you’re starting from scratch or upgrading your current site, cyberark technologies helps Kenyan businesses build modern, high-performing digital experiences.
+                    </p>
+                    <div className="mt-8">
+                        <Link
+                        href={route('contact')}
+                        className="inline-block rounded-md bg-amber-600 px-6 py-3 text-base font-semibold text-white shadow-sm hover:bg-amber-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-600"
+                        >
+                        Get a Free Quote
+                        </Link>
                     </div>
+                    </div>
+
 
                 </div>
             </div>

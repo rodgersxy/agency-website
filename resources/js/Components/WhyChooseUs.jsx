@@ -25,13 +25,13 @@ const benefits = [
 
 export default function WhyChooseUs() {
     return (
-        <div className="overflow-hidden bg-white dark:bg-slate-800 py-24 sm:py-32">
+        <div className="overflow-hidden bg-white dark:bg-slate-800 md:py-16 sm:py-32">
             <div className="mx-auto max-w-7xl px-6 lg:px-8">
                 {/* The main two-column grid */}
                 <div className="mx-auto grid max-w-2xl grid-cols-1 items-start gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
                     
                     {/* Left Column: Text Content (unchanged) */}
-                    <div className="lg:pr-8 lg:pt-4">
+                    <div className="lg:pr-8 lg:pt-4 mt-8">
                         <div className="lg:max-w-lg">
                             <h2 className="text-base font-semibold leading-7 text-amber-600">Why Partner With Us</h2>
                             <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl">
@@ -60,14 +60,14 @@ export default function WhyChooseUs() {
                     <div className="flex flex-col items-start">
                         <img
                             src="/images/office.jpg"
-                            alt="The UJUZIWEB office in Nairobi"
+                            alt="The cyberark technologies office in Nairobi"
                             className="w-[30rem] max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 sm:w-[40rem] md:-ml-4 lg:-ml-0"
                             width={2432}
                             height={1442}
                         />
 
                         {/* Your CTA code, now integrated and re-styled */}
-                        <div className="mt-12 text-left"> {/* Changed from mt-24 and text-center */}
+                        <div className="mt-12 mb-8 text-left"> {/* Changed from mt-24 and text-center */}
                             <h3 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-gray-100 sm:text-3xl">
                                 Have a project in mind?
                             </h3>

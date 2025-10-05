@@ -1,5 +1,6 @@
 import React from 'react';
 import Navigation from '@/Components/Navigation'; 
+import Testimonials from '@/Components/Testimonials';
 import Footer from '@/Components/Footer';       
 
 export default function MainLayout({ children }) {
@@ -12,6 +13,7 @@ export default function MainLayout({ children }) {
       <main>
         {children}
       </main>
+      <Testimonials />
 
       {/* Footer */}
       <Footer />

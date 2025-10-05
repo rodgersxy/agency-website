@@ -12,7 +12,7 @@ const socialLinks = [
     { name: 'TikTok', href: 'https://www.tiktok.com/@roydevalx?lang=en', icon: FaTiktok },
     { 
         name: 'WhatsApp', 
-        href: 'https://wa.me/254726746234?text=Hello%20UJUZIWEB!%20I%27m%20interested%20in%20your%20services.', 
+        href: 'https://wa.me/254726746234?text=Hello%20cyberarktechnologies!%20I%27m%20interested%20in%20your%20services.', 
         icon: FaWhatsapp 
     },
 ];
@@ -42,7 +42,7 @@ export default function Footer() {
                         
                         {/* Company Description */}
                         <p className="text-gray-300 text-lg leading-relaxed mb-10 max-w-2xl">
-                            Crafting digital experiences that drive business growth. We specialize in modern web development, mobile applications, and innovative digital solutions.
+                            We build modern websites, mobile apps, and digital solutions that help Kenyan businesses grow online and reach more customers.
                         </p>
                         
                         {/* Contact Info - Larger and Better Spaced */}
@@ -82,7 +82,7 @@ export default function Footer() {
                                 </div>
                                 <div>
                                     <p className="text-sm font-medium text-white">Location</p>
-                                    <p className="text-gray-300">Nairobi, Kenya</p>
+                                    <p className="text-gray-300"> Leomar Court, Westlands Rd. Nairobi, Kenya</p>
                                 </div>
                             </div>
                         </div>
@@ -90,7 +90,7 @@ export default function Footer() {
                         {/* WhatsApp CTA Button */}
                         <div className="mt-10">
                             <a
-                                href="https://wa.me/254726746234?text=Hello%20UJUZIWEB!%20I%27m%20interested%20in%20your%20services."
+                                href="https://wa.me/254726746234?text=Hello%20cyberarktechnologies!%20I%27m%20interested%20in%20your%20services."
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="inline-flex items-center px-6 py-3 bg-green-600 hover:bg-green-700 text-white font-semibold rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-green-600/25"
@@ -134,7 +134,7 @@ export default function Footer() {
                         {/* Copyright - More Prominent */}
                         <div className="text-center lg:text-left">
                             <p className="text-gray-300 text-base font-medium mb-2">
-                                &copy; {currentYear} TECHLUP Inc. All rights reserved.
+                                &copy; {currentYear} cyberark technologies Inc. All rights reserved.
                             </p>
                             <p className="text-gray-400 text-sm">
                                 Made with ❤️ in Kenya
