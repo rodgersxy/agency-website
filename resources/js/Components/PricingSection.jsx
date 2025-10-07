@@ -21,7 +21,7 @@ const packages = [
     },
     {
         name: 'Small Business Package',
-        price: 'Starting at KES 40,000',
+        price: 'Starting at KES 35,000',
         description: 'The complete solution for SMEs to establish a strong, professional online presence.',
         features: [
             'Everything in Personal, plus:',

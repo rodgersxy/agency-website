@@ -54,18 +54,19 @@ export default function Home({ latestBlogs }) {
           {/* Call-to-Action Buttons */}
           <div className="mt-10 flex flex-wrap justify-center gap-4">
             <Link
+              href={route('work')}
+              className="inline-flex items-center justify-center rounded-full border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-700 px-8 py-3.5 text-base font-semibold text-slate-700 dark:text-slate-200 shadow-sm transition hover:scale-105 hover:bg-slate-50 dark:hover:bg-slate-600 focus:outline-none focus:ring-2 focus:ring-amber-400 focus:ring-offset-2"
+            >
+              View Our Work
+            </Link>
+            <Link
               href={route('contact')}
               className="group inline-flex items-center justify-center rounded-full bg-gradient-to-r from-orange-500 to-amber-500 px-8 py-3.5 text-base font-semibold text-white shadow-lg transition hover:scale-105 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-amber-400 focus:ring-offset-2"
             >
               Get Started
               <FaArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
             </Link>
-            <Link
-              href={route('work')}
-              className="inline-flex items-center justify-center rounded-full border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-700 px-8 py-3.5 text-base font-semibold text-slate-700 dark:text-slate-200 shadow-sm transition hover:scale-105 hover:bg-slate-50 dark:hover:bg-slate-600 focus:outline-none focus:ring-2 focus:ring-amber-400 focus:ring-offset-2"
-            >
-              View Our Work
-            </Link>
+            
           </div>
 
         </div>

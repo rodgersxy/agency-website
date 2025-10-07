@@ -35,16 +35,16 @@ export default function Navigation() {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex items-center justify-between h-28">
                     <div className="flex-shrink-0 text-center">
-    {/* The Link now wraps the image and is a flex container to center it */}
+    
     <Link 
         href={route('home')} 
-        className="flex justify-center mb-2" // Added margin-bottom for spacing
+        className="flex justify-center mb-2" 
     >
         
         <img 
-            src="/images/cyberarklogo-m.png" // Path to your logo in the 'public' folder
-            alt="cyberark technologies Logo"     // IMPORTANT: Always add an alt tag for accessibility
-            className="h-24 w-auto" // Control the logo size here. 'h-12' is 48px. Adjust as needed.
+            src="/images/cyberarklogo-m.png" 
+            alt="cyberark technologies Logo"     
+            className="h-24 w-auto" 
         />
     </Link>
     {/* <p className="text-sm text-gray-600 tracking-wide">
@@ -75,7 +75,7 @@ export default function Navigation() {
                 </div>
             </div>
 
-            {/* Mobile Menu Panel */}
+            
             <div
                 className={`md:hidden transition-all duration-300 ease-in-out overflow-hidden ${
                     mobileMenuOpen ? 'max-h-96' : 'max-h-0'
@@ -86,7 +86,7 @@ export default function Navigation() {
                          <Link
                             key={link.href}
                             href={route(link.href)}
-                            // THIS IS THE LINE WE ADDED
+                            
                             onClick={() => setMobileMenuOpen(false)}
                             className={`block px-3 py-2 rounded-md text-base font-medium ${
                                 route().current(link.href)

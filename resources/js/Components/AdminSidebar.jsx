@@ -36,7 +36,7 @@ export default function AdminSidebar() {
         <div className="flex flex-col flex-grow bg-amber-800 pt-5 overflow-y-auto">
             <div className="flex items-center flex-shrink-0 px-4">
                 <Link href={route('home')} className="text-2xl font-bold text-white tracking-wider">
-                    TECHLUP
+                    CYBERARK 
                 </Link>
             </div>
             <nav className="mt-8 flex-1 px-3 space-y-2">

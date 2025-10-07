@@ -157,7 +157,7 @@ export default function Contact({ subject }) {
 
     return (
         <>
-            <Head title={recentlySuccessful ? "Message Sent!" : "Contact Us"} />
+            <Head title={recentlySuccessful ? "Message Sent!" : "Contact Us Cyberark Technologies - web design and development in kenya"} />
             
             <style>{`
                 @keyframes float {

@@ -57,7 +57,7 @@ export default function Footer() {
                                 </div>
                                 <div>
                                     <p className="text-sm font-medium text-white">Email</p>
-                                    <p className="text-gray-300 group-hover:text-amber-400 transition-colors duration-300">mogakaroy@gmail.com</p>
+                                    <p className="text-gray-300 group-hover:text-amber-400 transition-colors duration-300">info@cyberark.co.ke</p>
                                 </div>
                             </a>
                             
@@ -137,7 +137,7 @@ export default function Footer() {
                                 &copy; {currentYear} cyberark technologies Inc. All rights reserved.
                             </p>
                             <p className="text-gray-400 text-sm">
-                                Made with ❤️ in Kenya
+                                Made with ❤️ 
                             </p>
                         </div>
 
