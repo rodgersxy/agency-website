@@ -1,5 +1,6 @@
 import React from 'react';
 import Navigation from '@/Components/Navigation'; 
+import Faq from '@/Components/Faq';
 import Testimonials from '@/Components/Testimonials';
 import Footer from '@/Components/Footer';       
 
@@ -13,9 +14,8 @@ export default function MainLayout({ children }) {
       <main>
         {children}
       </main>
+      <Faq />
       <Testimonials />
-
-      {/* Footer */}
       <Footer />
     </div>
   );

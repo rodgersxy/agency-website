@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { Head } from '@inertiajs/react';
 import MainLayout from '@/Layouts/MainLayout';
 import ShareButtons from '@/Components/ShareButtons';
-import CallToAction from '@/Components/CallToAction'; 
+import CallToAction from '@/Components/CallToAction';
 
 export default function Show({ blog }) {
     const [currentUrl, setCurrentUrl] = useState('');
@@ -36,8 +36,9 @@ export default function Show({ blog }) {
 
                         <img src={blog.image_url} alt={blog.title} className="mb-12 w-full rounded-xl shadow-lg" />
                         
+                      
                         <div
-                            className="prose prose-lg prose-amber dark:prose-invert max-w-none"
+                            className="prose prose-lg dark:prose-invert max-w-none"
                             dangerouslySetInnerHTML={{ __html: blog.content }}
                         />
 
@@ -46,6 +47,7 @@ export default function Show({ blog }) {
                         </div>
                     </div>
                 </div>
+
                 <div className="mx-auto max-w-7xl px-6 lg:px-8 mt-24">
                     <CallToAction />
                 </div>

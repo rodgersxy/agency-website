@@ -1,0 +1,239 @@
+/* resources/css/blog-content.css */
+
+/* Enhanced Blog Content Styling */
+.blog-content {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    line-height: 1.8;
+    color: #374151;
+}
+
+.dark .blog-content {
+    color: #d1d5db;
+}
+
+/* Paragraph Spacing */
+.blog-content p {
+    margin-bottom: 1.5rem;
+    font-size: 1.125rem;
+    line-height: 1.75;
+}
+
+/* Headings */
+.blog-content h1,
+.blog-content h2,
+.blog-content h3,
+.blog-content h4,
+.blog-content h5,
+.blog-content h6 {
+    font-weight: 700;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    color: #111827;
+    line-height: 1.3;
+}
+
+.dark .blog-content h1,
+.dark .blog-content h2,
+.dark .blog-content h3,
+.dark .blog-content h4,
+.dark .blog-content h5,
+.dark .blog-content h6 {
+    color: #f9fafb;
+}
+
+.blog-content h1 { font-size: 2.5rem; }
+.blog-content h2 { font-size: 2rem; }
+.blog-content h3 { font-size: 1.5rem; }
+.blog-content h4 { font-size: 1.25rem; }
+
+/* Links */
+.blog-content a {
+    color: #d97706;
+    text-decoration: none;
+    font-weight: 500;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.2s;
+}
+
+.blog-content a:hover {
+    border-bottom-color: #d97706;
+}
+
+.dark .blog-content a {
+    color: #fbbf24;
+}
+
+.dark .blog-content a:hover {
+    border-bottom-color: #fbbf24;
+}
+
+/* Lists */
+.blog-content ul,
+.blog-content ol {
+    margin: 1.5rem 0;
+    padding-left: 2rem;
+}
+
+.blog-content li {
+    margin-bottom: 0.75rem;
+    line-height: 1.75;
+}
+
+.blog-content ul li {
+    list-style-type: disc;
+}
+
+.blog-content ol li {
+    list-style-type: decimal;
+}
+
+.blog-content li::marker {
+    color: #d97706;
+}
+
+.dark .blog-content li::marker {
+    color: #fbbf24;
+}
+
+/* Nested Lists */
+.blog-content ul ul,
+.blog-content ol ul {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.blog-content ul ul li {
+    list-style-type: circle;
+}
+
+/* Blockquotes */
+.blog-content blockquote {
+    border-left: 4px solid #d97706;
+    padding-left: 1.5rem;
+    margin: 2rem 0;
+    font-style: italic;
+    color: #6b7280;
+    background-color: #f9fafb;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+}
+
+.dark .blog-content blockquote {
+    background-color: #1f2937;
+    color: #9ca3af;
+    border-left-color: #fbbf24;
+}
+
+/* Code Blocks */
+.blog-content code {
+    background-color: #f3f4f6;
+    color: #d97706;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    font-size: 0.875rem;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.dark .blog-content code {
+    background-color: #374151;
+    color: #fbbf24;
+}
+
+.blog-content pre {
+    background-color: #1f2937;
+    color: #f9fafb;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    overflow-x: auto;
+    margin: 2rem 0;
+}
+
+.blog-content pre code {
+    background-color: transparent;
+    color: inherit;
+    padding: 0;
+}
+
+/* Images */
+.blog-content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 0.75rem;
+    margin: 2rem auto;
+    display: block;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.dark .blog-content img {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Tables */
+.blog-content table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 2rem 0;
+    font-size: 1rem;
+}
+
+.blog-content th,
+.blog-content td {
+    padding: 0.75rem 1rem;
+    text-align: left;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.dark .blog-content th,
+.dark .blog-content td {
+    border-bottom-color: #374151;
+}
+
+.blog-content th {
+    background-color: #f9fafb;
+    font-weight: 600;
+    color: #111827;
+}
+
+.dark .blog-content th {
+    background-color: #374151;
+    color: #f9fafb;
+}
+
+/* Horizontal Rule */
+.blog-content hr {
+    border: none;
+    border-top: 2px solid #e5e7eb;
+    margin: 3rem 0;
+}
+
+.dark .blog-content hr {
+    border-top-color: #374151;
+}
+
+/* Strong/Bold */
+.blog-content strong,
+.blog-content b {
+    font-weight: 600;
+    color: #111827;
+}
+
+.dark .blog-content strong,
+.dark .blog-content b {
+    color: #f9fafb;
+}
+
+/* Emphasis/Italic */
+.blog-content em,
+.blog-content i {
+    font-style: italic;
+}
+
+/* First Paragraph Special Styling (Optional) */
+.blog-content > p:first-of-type {
+    font-size: 1.25rem;
+    color: #4b5563;
+}
+
+.dark .blog-content > p:first-of-type {
+    color: #d1d5db;
+}

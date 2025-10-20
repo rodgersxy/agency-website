@@ -1,11 +1,13 @@
+//resources/js/app.jsx
 import '../css/app.css';
 import './bootstrap';
 
 import { createInertiaApp } from '@inertiajs/react';
 import { resolvePageComponent } from 'laravel-vite-plugin/inertia-helpers';
 import { createRoot } from 'react-dom/client';
+import { router } from '@inertiajs/react';
 
-const appName = import.meta.env.VITE_APP_NAME || 'Laravel';
+const appName = import.meta.env.VITE_APP_NAME || 'Cyberark';
 
 createInertiaApp({
     title: (title) => `${title} - ${appName}`,
@@ -22,4 +24,13 @@ createInertiaApp({
     progress: {
         color: '#4B5563',
     },
+});
+
+router.on('navigate', (event) => {
+    if (typeof window.gtag !== 'function') {
+        return;
+    }
+    window.gtag('event', 'page_view', {
+        page_path: event.detail.page.url,
+    });
 });
